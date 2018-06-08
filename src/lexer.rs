@@ -230,6 +230,10 @@ impl Lexer{
                     self.advance();
                     return self.string();
                 },
+                ',' => {
+                    self.advance();
+                    return Token::Comma;
+                }
                 _ => self.error()
             }
         }
